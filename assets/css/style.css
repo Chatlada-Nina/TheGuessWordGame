@@ -1,0 +1,102 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+/* CSS varieables */
+:root {
+    --background-color: #ccdada;
+    --container-bg-color: #fff;
+    --modal-bg-color: #0f4a6f;
+    --modal-text-color: #fff;
+    --text-color: #0f4a6f;
+    --text-hover-color: #5193bd;
+    --button-bg-color: #0f4a6f;
+    --button-text-color: #fff;
+    --button-hover-color: #dc2323;
+    --button-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Main section */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+    margin: 5% 5%;
+    border-radius: 20px;
+    border: 2px solid var(--text-color);
+    background-color: var(--container-bg-color);
+}
+
+.main-container img {
+    border-radius: 30px;
+    width: 100%;
+}
+#banner {
+    margin: 30px 20px;
+}
+#start {
+    padding: 8px 30px;
+    margin-bottom: 15px;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 1.2em;
+    color: var(--button-text-color);
+    background: var(--button-bg-color);
+    box-shadow: var(--button-box-shadow);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#start:hover {
+    background: var(--button-hover-color);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#ins-open {
+    font-family: "Poetsen One", sans-serif;
+    background-color: var(--container-bg-color);
+    color: var(--text-color);
+    border: none;
+    text-decoration: underline;
+    font-size: 1.2em;
+    padding-bottom: 1em;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    font-size: small;
+    color: var(--text-color);
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: rcenter;
+    padding-bottom: 20px;
+}
+.footer i {
+    color: var(--text-color);
+}
