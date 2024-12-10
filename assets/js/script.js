@@ -83,8 +83,45 @@ insClose.addEventListener("click", () => {
 // --------- Game Section ---------
 
 // Create function that randomly selects an object in the array. This object should never be repeatedly chosen.
+// Using Fisher Yates Shuffle and learned from Youtube tutorial - https://www.youtube.com/watch?v=FGAUekwri1Q
+function shuffleArray(wordList) {
+    for (let i = wordList.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [wordList[i], wordList[j]] = [wordList[j], wordList[i]]; // Swap elements
+    }
+    return wordList;
+};
+
+// Ensure that each element in the array is selected before reshuffling.
+function createUniqueSelector(wordList) {
+    let shuffledArray = shuffleArray([...wordList]); // Shuffle a copy of the array
+    let index = 0;
+
+    return function () {
+        if (index >= shuffledArray.length) {
+            shuffledArray = shuffleArray([...wordList]); // Reshuffle when all elements are used
+            index = 0;
+        }
+        return shuffledArray[index++];
+    };
+};
+
 
 // Create function to display the selected object.
+function displaySelectedValues(object, keysToDisplay) {
+    let result = [];
+    for (let key of keysToDisplay) {
+        if (object.hasOwnProperty(key)) {
+            result.push(object[key]);
+        }
+    }
+    return result;
+};
+
+const selectUnique = createUniqueSelector(wordList);
+let selectedObject = selectUnique();
+let selectedWord = displaySelectedValues(selectedObject, ["word", "definition"]);
+let selectedImage = displaySelectedValues(selectedObject, ["image"]);
 
 // Function to display a pop-up message.
 
