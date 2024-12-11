@@ -294,3 +294,28 @@ footer {
 .footer i {
     color: var(--text-color);
 }
+
+
+
+/*------------ MEDIA QUERIES ------------*/
+
+/* Tablets */
+@media only screen and (min-width : 576px) {
+    .alert-box {
+        width: 75%;
+    }
+}
+
+/* Laptops */
+@media only screen and (min-width : 768px) {
+
+    .modal {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 1.2em;
+    }
+
+    .alert-box {
+        max-width: 500px;
+    }
+}
