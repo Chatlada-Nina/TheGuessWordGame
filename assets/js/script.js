@@ -31,6 +31,11 @@ insClose.addEventListener("click", () => {
     imageElement.src = selectedImage;
     imageElement.alt = "image-guessing-word";
 
+    // Create Timer 
+    const timerElement = document.createElement("div"); 
+    timerElement.id = "timer"; 
+    timerElement.innerHTML = 'Time:  <span id="timeLeft">30</span>';
+
     //Create Input field
     const inputElement = document.createElement("input");
     inputElement.id = "answerInput";
@@ -61,6 +66,7 @@ insClose.addEventListener("click", () => {
     //Append new elements
     const container = document.getElementById("game-container");
     container.appendChild(imageElement);
+    container.appendChild(timerElement);
     container.appendChild(inputElement);
     container.appendChild(okBtnElement);
     container.appendChild(scoreElement);
@@ -69,6 +75,8 @@ insClose.addEventListener("click", () => {
 
     // Add eventListener to the ok button to check the answer
     okBtnElement.addEventListener("click", checkAnswer);
+
+    startTimer();
 
 }
 
@@ -133,6 +141,8 @@ function displayPopup(message) {
     const closeBtn = document.getElementById("closeBtn");
     const nextBtn = document.getElementById("nextBtn");
 
+    // Pause the timer 
+    clearInterval(timer);
 
     alertMsg.innerHTML = message;
     alertBox.style.display = "block";
@@ -158,12 +168,14 @@ function displayPopup(message) {
 // Function to check the answer.
 
 function checkAnswer() {
+    clearInterval(timer); // Stop the timer when the answer is checked
 
     const userInput = document.getElementById("answerInput").value.trim(); // trim() will remove any whitespace in the input field
 
     if (userInput === "") {
         displayPopup("Please enter your guess word🙂");
         return;
+
     }
     if (userInput === selectedObject.word) {
         displayPopup('CORRECT! 🎉'); 
@@ -196,7 +208,7 @@ function incAnsweredQuestions() {
         document.getElementById("image").src = selectedImage[0];
         document.getElementById("hint").innerText = `Hint : ${selectedObject.hint}`;
         document.getElementById("answerInput").value = "";
-        // resetTimer(); will create soon
+        resetTimer();
     }
 
 };
@@ -209,6 +221,31 @@ function incrementScore() {
     document.getElementById('score').innerText = `Score: ${score}`;
 };
 
+// Function 30 second timer for each question.
+// Learned and modified to suit my project from tutorials -W3Schools(setInterval,setTimeout,clearInterval), https://dev.to/gloriasilver/how-to-schedule-tasks-using-javascript-timers-and-intervals-4385?form=MG0AV3
+let timer;
+let timeLeft = 30;
+
+function startTimer() {
+
+    timer = setInterval(function () {
+        timeLeft--;
+        document.getElementById("timeLeft").innerText = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            displayPopup("TIME'S UP!! <br>The correct answer was: <b>" + selectedObject.word + "</b>");
+            incAnsweredQuestions();
+        }
+    }, 1000);
+};
+
+function resetTimer() {
+    clearInterval(timer);
+    timeLeft = 30; //Reset to 30 seconds for a new question
+    document.getElementById("timeLeft").innerText = timeLeft;
+    startTimer();
+};
+
 // Create function EndGame to replace the game-container with the total score and a restart button.
 
-// Function 30 second timer for each question.
