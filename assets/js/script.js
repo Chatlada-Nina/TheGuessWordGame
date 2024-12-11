@@ -302,12 +302,16 @@ function endGame() {
 
 
 //when the keyboard appears and scroll the page to the input field. 
-// This function ensures that the input field remains in view when the keyboard is active.
+// This function ensures that the input field and banner remains in view when the keyboard is active.
 
 window.addEventListener('resize', function() { 
     const inputField = document.getElementById('answerInput'); 
-    if (inputField) { 
-        inputField.scrollIntoView({ behavior: 'smooth' }); 
+    const Banner = document.getElementById('banner');  
+    if (inputField && Banner) { 
+        // Calculate the position to scroll to ensure both the banner and input field are visible 
+        const bannerHeight = Banner.getBoundingClientRect().height; 
+        const targetPosition = inputField.getBoundingClientRect().top + window.scrollY - bannerHeight; 
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' }); 
     } 
 });
 
