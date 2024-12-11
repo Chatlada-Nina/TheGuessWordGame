@@ -243,7 +243,7 @@ function incAnsweredQuestions() {
     answeredQuestions++;
     document.getElementById("turnpage").innerText = `${answeredQuestions} / 10`;
 
-    if (answeredQuestions >= 1) {
+    if (answeredQuestions >= 10) {
         endGame();
     } else {
 

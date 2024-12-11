@@ -49,7 +49,7 @@ body {
     line-height: 2;
     margin: 5% 5%;
     border-radius: 20px;
-    border: 2px solid var(--text-color);
+    border: 20px solid var(--text-color);
     background-color: var(--container-bg-color);
 }
 
@@ -261,7 +261,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 75%;
     background-color: var(--background-color);
     padding: 20px 30px 10px 30px;
     border-radius: 20px;
@@ -312,6 +312,7 @@ body {
 }
 
 
+
 /* -------------Footer------------- */
 
 footer {
@@ -335,12 +336,6 @@ footer {
 
 /*------------ MEDIA QUERIES ------------*/
 
-/* Tablets */
-@media only screen and (min-width : 576px) {
-    .alert-box {
-        width: 75%;
-    }
-}
 
 /* Laptops */
 @media only screen and (min-width : 768px) {
