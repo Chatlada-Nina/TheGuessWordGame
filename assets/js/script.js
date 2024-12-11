@@ -153,6 +153,8 @@ function displayPopup(message) {
     };
 };
 
+
+
 // Function to check the answer.
 
 function checkAnswer() {
@@ -164,18 +166,49 @@ function checkAnswer() {
         return;
     }
     if (userInput === selectedObject.word) {
-        displayPopup('CORRECT! 🎉'); incrementScore();
+        displayPopup('CORRECT! 🎉'); 
+        incrementScore(); 
 
     } else {
         displayPopup(`INCORRECT!😓<br>The correct answer is: <b>${selectedObject.word}</b><br>--> ${selectedObject.definition}`);
     }
     incAnsweredQuestions();
-}
+};
+
+
+
+// Function to increment the number of answered questions.
+
+let answeredQuestions = 0;
+function incAnsweredQuestions() {
+    answeredQuestions++;
+    document.getElementById("turnpage").innerText = `${answeredQuestions} / 10`;
+
+    if (answeredQuestions >= 10) {
+    } else {
+
+        // Select a new object for the next round
+        selectedObject = selectUnique();
+        selectedWord = displaySelectedValues(selectedObject, ["word", "definition"]);
+        selectedImage = displaySelectedValues(selectedObject, ["image"]);
+
+        // Update the image source, hint and clear the input field for the new round
+        document.getElementById("image").src = selectedImage[0];
+        document.getElementById("hint").innerText = `Hint : ${selectedObject.hint}`;
+        document.getElementById("answerInput").value = "";
+        // resetTimer(); will create soon
+    }
+
+};
 
 // Function to increment the score value when a correct answer is selected.
 
-// Create function EndGame to replace the game-container with the total score and a restart button.
+let score = 0;
+function incrementScore() {
+    score++;
+    document.getElementById('score').innerText = `Score: ${score}`;
+};
 
-// Function to increment the number of answered questions.
+// Create function EndGame to replace the game-container with the total score and a restart button.
 
 // Function 30 second timer for each question.
