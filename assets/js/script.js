@@ -88,9 +88,6 @@ insClose.addEventListener("click", () => {
 
 
 
-
-
-
 // ------------ Game Section --------------
 
 // Create function that randomly selects an object in the array. This object should never be repeatedly chosen.
@@ -135,7 +132,7 @@ let selectedWord = displaySelectedValues(selectedObject, ["word", "definition"])
 let selectedImage = displaySelectedValues(selectedObject, ["image"]);
 
 // Function to display a pop-up message.
-function displayPopup(message) {
+function displayPopup(message, resumeTimer = false) {
     const alertBox = document.getElementById("alertBox");
     const alertMsg = document.getElementById("alertMsg");
     const closeBtn = document.getElementById("closeBtn");
@@ -150,19 +147,35 @@ function displayPopup(message) {
     //close the alert box when close button is clicked
     closeBtn.onclick = function () {
         alertBox.style.display = "none";
+        if (resumeTimer) {
+            startTimer(); // resume Timer for the empty input field clicked
+        } else {
+            resetTimer(); // reset timer for the new question
+        }
     };
+
     //close the alert box when next button is clicked
     nextBtn.onclick = function () {
         alertBox.style.display = "none";
+        if (resumeTimer) {
+            startTimer();
+        } else {
+            resetTimer();
+        }
     };
+
     //close the alert box when clicking outside the box
     window.onclick = function (event) {
         if (event.target === alertBox) {
             alertBox.style.display = "none";
+            if (resumeTimer) {
+                startTimer();
+            } else {
+                resetTimer();
+            }
         }
     };
 };
-
 
 
 // Function to check the answer.
@@ -173,7 +186,7 @@ function checkAnswer() {
     const userInput = document.getElementById("answerInput").value.trim(); // trim() will remove any whitespace in the input field
 
     if (userInput === "") {
-        displayPopup("Please enter your guess word🙂");
+        displayPopup("Please enter your guess word🙂", true);
         return;
 
     }
@@ -187,31 +200,6 @@ function checkAnswer() {
     incAnsweredQuestions();
 };
 
-
-
-// Function to increment the number of answered questions.
-
-let answeredQuestions = 0;
-function incAnsweredQuestions() {
-    answeredQuestions++;
-    document.getElementById("turnpage").innerText = `${answeredQuestions} / 10`;
-
-    if (answeredQuestions >= 10) {
-    } else {
-
-        // Select a new object for the next round
-        selectedObject = selectUnique();
-        selectedWord = displaySelectedValues(selectedObject, ["word", "definition"]);
-        selectedImage = displaySelectedValues(selectedObject, ["image"]);
-
-        // Update the image source, hint and clear the input field for the new round
-        document.getElementById("image").src = selectedImage[0];
-        document.getElementById("hint").innerText = `Hint : ${selectedObject.hint}`;
-        document.getElementById("answerInput").value = "";
-        resetTimer();
-    }
-
-};
 
 // Function to increment the score value when a correct answer is selected.
 
@@ -247,5 +235,68 @@ function resetTimer() {
     startTimer();
 };
 
+
+// Function to increment the number of answered questions.
+
+let answeredQuestions = 0;
+function incAnsweredQuestions() {
+    answeredQuestions++;
+    document.getElementById("turnpage").innerText = `${answeredQuestions} / 10`;
+
+    if (answeredQuestions >= 1) {
+        endGame();
+    } else {
+
+        // Select a new object for the next round
+        selectedObject = selectUnique();
+        selectedWord = displaySelectedValues(selectedObject, ["word", "definition"]);
+        selectedImage = displaySelectedValues(selectedObject, ["image"]);
+
+        // Update the image source, hint and clear the input field for the new round
+        document.getElementById("image").src = selectedImage[0];
+        document.getElementById("hint").innerText = `Hint : ${selectedObject.hint}`;
+        document.getElementById("answerInput").value = "";
+        resetTimer();
+    }
+};
+
+
+
+
+// ----------End Game Section---------------
+
 // Create function EndGame to replace the game-container with the total score and a restart button.
+const removeGameCont = document.getElementById("game-container");
+
+function endGame() {
+    removeGameCont.remove();
+
+    const endTextElement = document.createElement("h1");
+    endTextElement.id = "endText";
+    endTextElement.innerText = "GAME OVER!!";
+
+    const totalScoreElement = document.createElement("p");
+    totalScoreElement.id = "totalScore";
+    totalScoreElement.innerText = `Your total score is : ${score}`;
+
+    const restartTextElement = document.createElement("p");
+    restartTextElement.id = "restartText";
+    restartTextElement.innerText = "Wanna play again?";
+
+    const restartBtnElement = document.createElement("button");
+    restartBtnElement.id = "restartBtn";
+    restartBtnElement.innerText = "Play Again";
+    restartBtnElement.addEventListener("click", () => {
+        location.reload(); //Reload the page to restart the game
+    });
+
+    const container = document.getElementById("endgame-container");
+    container.appendChild(endTextElement);
+    container.appendChild(totalScoreElement);
+    container.appendChild(restartTextElement);
+    container.appendChild(restartBtnElement);
+
+};
+
+
 

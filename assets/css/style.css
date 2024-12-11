@@ -217,6 +217,42 @@ body {
 
 
 
+/* -----------End Game section----------- */
+
+#endgame-container {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+}
+
+#totalScore {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+#restartBtn {
+    padding: 5px 20px;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--button-text-color);
+    background: var(--button-hover-color);
+    box-shadow: var(--button-box-shadow);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#restartBtn:hover {
+    background: var(--button-bg-color);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+
+
 /* ----------Alert box message---------- */
 
 .alert-box {
