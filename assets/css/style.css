@@ -64,7 +64,7 @@ body {
 
 #start {
     padding: 8px 30px;
-    margin-bottom: 15px;
+    margin-top: 0.5em;
     font-size: 1.2em;
     color: var(--button-text-color);
     background: var(--button-bg-color);
@@ -130,7 +130,7 @@ body {
 #ins-close {
     background-color: var(--modal-bg-color);
     color: var(--modal-text-color);
-    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 #ins-open,
@@ -138,7 +138,6 @@ body {
     border: none;
     text-decoration: underline;
     font-size: 1.2em;
-    padding-bottom: 1em;
     cursor: pointer;
 }
 

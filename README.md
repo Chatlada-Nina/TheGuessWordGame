@@ -104,7 +104,8 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 
 ### Bugs discovered
-
+- When the instruction modal display on a mobile phone, the close button position is too low. To improve this, I adjust the padding in CSS to ensure that the button position is fit the phone screen and other screen.
+- When users fill in a correct answer with the uppercase, the function checked as a wrong answer. To improve this, I added .toLowerCase() in the checkAnswer function to convert whatever the users types in, it will be compared in a case-insensitive manner. 
 
 
 

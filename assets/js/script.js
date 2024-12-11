@@ -183,7 +183,8 @@ function displayPopup(message, resumeTimer = false) {
 function checkAnswer() {
     clearInterval(timer); // Stop the timer when the answer is checked
 
-    const userInput = document.getElementById("answerInput").value.trim(); // trim() will remove any whitespace in the input field
+    const userInput = document.getElementById("answerInput").value.trim().toLowerCase(); 
+    // trim() will remove any whitespace in the input field, toLowerCase will ensure the input converts to lowercase
 
     if (userInput === "") {
         displayPopup("Please enter your guess word🙂", true);
