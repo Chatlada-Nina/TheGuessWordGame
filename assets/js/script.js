@@ -301,3 +301,13 @@ function endGame() {
 
 
 
+//when the keyboard appears and scroll the page to the input field. 
+// This function ensures that the input field remains in view when the keyboard is active.
+
+window.addEventListener('resize', function() { 
+    const inputField = document.getElementById('answerInput'); 
+    if (inputField) { 
+        inputField.scrollIntoView({ behavior: 'smooth' }); 
+    } 
+});
+
