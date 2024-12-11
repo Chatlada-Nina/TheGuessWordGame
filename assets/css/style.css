@@ -217,6 +217,64 @@ body {
 
 
 
+/* ----------Alert box message---------- */
+
+.alert-box {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: var(--background-color);
+    padding: 20px 30px 10px 30px;
+    border-radius: 20px;
+    z-index: 1000;
+    /* make it appear above other content */
+    text-align: center;
+    border: 2px solid;
+    color: var(--text-color);
+}
+
+.alert-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#alertMsg {
+    padding-top: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    font-size: 30px;
+    top: -30px;
+    right: -9px;
+    color: #dc2323;
+    cursor: pointer;
+}
+
+.next-btn {
+    padding: 5px 30px;
+    margin-top: 30px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--button-text-color);
+    background: var(--button-bg-color);
+    box-shadow: var(--button-box-shadow);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.next-btn:hover {
+    background: #026fb3;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
 
 /* -------------Footer------------- */
 
