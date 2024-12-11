@@ -1,4 +1,4 @@
-// --------- Home page ---------
+// ------------ Home page -------------
 
 // Define the modal instruction elements and add eventListener(click) to add and remove class "reveal"
 
@@ -67,6 +67,9 @@ insClose.addEventListener("click", () => {
     container.appendChild(hintElement);
     container.appendChild(turnPageElement);
 
+    // Add eventListener to the ok button to check the answer
+    okBtnElement.addEventListener("click", checkAnswer);
+
 }
 
     // Call the function updateElement
@@ -80,7 +83,7 @@ insClose.addEventListener("click", () => {
 
 
 
-// --------- Game Section ---------
+// ------------ Game Section --------------
 
 // Create function that randomly selects an object in the array. This object should never be repeatedly chosen.
 // Using Fisher Yates Shuffle and learned from Youtube tutorial - https://www.youtube.com/watch?v=FGAUekwri1Q
@@ -124,8 +127,50 @@ let selectedWord = displaySelectedValues(selectedObject, ["word", "definition"])
 let selectedImage = displaySelectedValues(selectedObject, ["image"]);
 
 // Function to display a pop-up message.
+function displayPopup(message) {
+    const alertBox = document.getElementById("alertBox");
+    const alertMsg = document.getElementById("alertMsg");
+    const closeBtn = document.getElementById("closeBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+
+    alertMsg.innerHTML = message;
+    alertBox.style.display = "block";
+
+    //close the alert box when close button is clicked
+    closeBtn.onclick = function () {
+        alertBox.style.display = "none";
+    };
+    //close the alert box when next button is clicked
+    nextBtn.onclick = function () {
+        alertBox.style.display = "none";
+    };
+    //close the alert box when clicking outside the box
+    window.onclick = function (event) {
+        if (event.target === alertBox) {
+            alertBox.style.display = "none";
+        }
+    };
+};
 
 // Function to check the answer.
+
+function checkAnswer() {
+
+    const userInput = document.getElementById("answerInput").value.trim(); // trim() will remove any whitespace in the input field
+
+    if (userInput === "") {
+        displayPopup("Please enter your guess word🙂");
+        return;
+    }
+    if (userInput === selectedObject.word) {
+        displayPopup('CORRECT! 🎉'); incrementScore();
+
+    } else {
+        displayPopup(`INCORRECT!😓<br>The correct answer is: <b>${selectedObject.word}</b><br>--> ${selectedObject.definition}`);
+    }
+    incAnsweredQuestions();
+}
 
 // Function to increment the score value when a correct answer is selected.
 
