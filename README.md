@@ -2,7 +2,7 @@
 
 ![The website shown on a variety of screen sizes](/documentation/readme/screen-responsive.png)
 
-**The Guess Word Game** is my second project for Code Instutute. The idea started with a popular TV program which I used to watch with my family in my hometown. They will show the audients an image to guess a secret word and the audients need to answer to collect the score, who is collected the highest score will win. This game is very fun and gave me the idea to create a similar game with the purpose of learning and making the game more accessable, users can learn and play the game on their phone and devices any time and anywhere.
+**The Guess Word Game** is my second project for Code Instutute. The idea started with a popular TV program which I used to watch with my family in my hometown. They will show the audients an image to guess a secret word and the audients need to answer to collect the score, who is collected the highest score will win. This game is very fun and gave me the idea to create a similar game with the purpose of learning and making the game more accessable, users can learn and play the game on their phone and other devices any time and anywhere.
 
 In a study by [Carpenter and Olson(2012)](https://www.researchgate.net/publication/51519245_Are_Pictures_Good_for_Learning_New_Vocabulary_in_a_Foreign_Language_Only_If_You_Think_They_Are_Not), vocabulary learning from picture-word pairing was more effective than words translated in native language. 
 
@@ -41,7 +41,9 @@ The game is suitable for children, English learners and anyone, let's increase y
 
 ## UX
 
-My goal is to make one page game site that is simple and easy for everyone to nevigate and play the game. The Home page start with an intruction and a Play button, when users click Play, the game section will appear and the game starts. This single page game site allows me to design an interested game site and create functionalities in the game in the managable way. 
+My goal is to make one page game site that is simple and easy for everyone to nevigate and play the game. The Home page start with an intruction and a Play button, when users click Play, the game section will appear and the game starts. The game contains images that will give you an ideal of the guessing word and other features (you can see them in details on the features section)
+The final section is when the game over, users will see their total score and if they want to play again, there is a button to click to play again or as many time as they want.
+This single page game site also allows me to design an interested game site and create functionalities in the game in the managable way. 
 
 ### User stories
 1. As a parent of my children, I want to see a site that has easy and simple instructions for my children to understand and want to play the game.
@@ -63,39 +65,71 @@ The Guess Word Game page is a user-friendly website so the main colours I chose 
 
 ### Typography
 I used [Poppins](https://fonts.google.com/specimen/Poppins) because It's versatile and modern style.
-Additionally, I use [Font Awesome](https://fontawesome.com/) for my social media icons in the footer to help customers quickly and easily identify my social media sites.
+Additionally, I use [Font Awesome](https://fontawesome.com/) for icons in the game to make the site casual and friendly. 
 
 
 ## Features
 
 ### Header
 
-![Screenshot of the navigation bar in the website](/documentation/readme/navigation-bar.png)
+The header contains the banner of the website, Guess word. It is simple but concise. The banner will display on the top of the website at all time so users have an accessible shotcut to go back to the home page anytime.
+
+![Screenshot of the banner in the website](/documentation/readme/navigation-bar.png)
 
 ### Home page
 
+The home page include the banner, the instruction (How to play button) and a play button. This landing page is clean and allows users to click on How to play to read the instruction before start playing game. The play button has a hover color red when mouse is overed to stimulate users to click play.
 
 ![Screenshot of the home page in the website](/documentation/readme/home-page.png)
 
+- The instruction informs users of how to play the game with clear instructions.
+![Screenshot of the instruction in the website](/documentation/readme/home-page.png)
+
 ### The Game Section
 
+Now, the game starts! The game section includes the banner, 2 images, timer, score, a hint and a number that show how many word left. Each round, the user will have 30 seconds to guess a word which makes the game excited. But not too hard so a hint will be a hero to help users. Score feature allows users to see how many score they've collected and page number allows users to know where they are in the game and how many word left to play. 
 
-![Screenshot of the programs section in the home page](/documentation/readme/program-section.png)
+![Screenshot of the game section in the home page](/documentation/readme/program-section.png)
 
 ### Notified Pop-up
 
+The notified Pop-up allows users to get a result of their guess. When users click OK button, the notified pop-up will display to let users know the result of the answer. Correct answer will display correct and current score will increase. Incorrect answer will display a correct word and definition so users get to learn new word and know what the word means. The input needs to fill out before moving to the next word.
+
+- A pop-up to informs users to type in an answer before moving on the next word.
+
+![Screenshot of the an empty input pop-up](/documentation/readme/home-page.png)
+
+- A pop-up to informs users that the answer is correct.
+
+![Screenshot of the an empty input pop-up](/documentation/readme/home-page.png)
+
+- A pop-up to informs users that the answer is incorrect.
+
+![Screenshot of the an empty input pop-up](/documentation/readme/home-page.png)
+
+- A pop-up to informs users that the time is up.
+
+![Screenshot of the an empty input pop-up](/documentation/readme/home-page.png)
+
 ### Game Over
 
-![Screenshot of the testimonials in the homepage](/documentation/readme/testimonials.png)
+The game over section includes the banner, Game over text, total score and a play again button. This section allows users to get the result of the game and see how many words they knew. Users can play as many time as they want by clicking the play again button.
 
-### The Footer
+![Screenshot of the game over page ](/documentation/readme/testimonials.png)
+
+### 404 page
+
+The 404 page will displayed if the user navigate to a broken link.
+![Screenshot of the 404 page in the website](/documentation/readme/footer.png)
 
 
-![Screenshot of the footer in the website](/documentation/readme/footer.png)
+## Future Features
 
+High score records
+- I would like to add user high score records to engage more users to play or want to beat the high score.
 
-## Features left to implement
-
+Add more words into word list
+- I would like to have many more words in the wordlist so users can have more word to guess and learn from the website.
 
 
 ## Testing
