@@ -58,14 +58,10 @@ body {
     width: 100%;
 }
 
-#banner {
-    margin: 30px 20px;
-}
-
 #start {
-    padding: 8px 30px;
+    padding: 5px 20px;
     margin-top: 0.5em;
-    font-size: 1.2em;
+    font-size: 1em;
     color: var(--button-text-color);
     background: var(--button-bg-color);
     box-shadow: var(--button-box-shadow);
@@ -137,7 +133,7 @@ body {
 #ins-close {
     border: none;
     text-decoration: underline;
-    font-size: 1.2em;
+    font-size: 1em;
     cursor: pointer;
 }
 
@@ -373,9 +369,26 @@ footer {
 
 /*------------ Media Queries ------------*/
 
+/* tablets */
+@media only screen and (min-width : 576px) {
+    #ins-open {
+        font-size: 1.3em;
+    }
+    #start {
+        font-size: 1.2em;
+        padding: 8px 30px;
+    }
+}
 
 /* Laptops */
 @media only screen and (min-width : 768px) {
+
+    #ins-open {
+        font-size: 1.5em;
+    }
+    #start {
+        font-size: 1.4em;
+    }
 
     .modal {
         margin-left: 10%;
