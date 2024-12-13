@@ -53,19 +53,23 @@ This single page game site also allows me to design an interested game site and 
 5. As an English learner, I want to learn new words so that I can expand my vocabulary skill.
 
 ### Wireframes
-[Home](/documentation/wireframe/Home.png)
+[Home](/documentation/wireframe/homepage.png)
 
-[Game page]()
+[Game page](/documentation/wireframe/gamepage.png)
 
-[Game over page]()
+[Game Over page](/documentation/wireframe/gameoverpage.png)
+
+[404 page](/documentation/wireframe/404page.png)
 
 
 ### Colours Theme
-The Guess Word Game page is a user-friendly website so the main colours I chose are blue, nice and cool tones. I used [Peacock's Gaze color combination](https://www.canva.com/colors/color-palettes/peacocks-gaze/) and red color with all small details. Moreover, I used [WebAIM:Contrast Checker](https://webaim.org/) to check the contrast of my colours to ensure they are easy to read for users.
+The Guess Word Game page is a user-friendly website so the main colours I chose are blue, nice and cool tones. My color theme inspired by [Peacock's Gaze color combination](https://www.canva.com/colors/color-palettes/peacocks-gaze/) and red color with all small details. Moreover, I used [WebAIM:Contrast Checker](https://webaim.org/) to check the contrast of my colours to ensure they are easy to read for users.
+
+![The colour theme of the website](/documentation/readme/colour-theme.png)
 
 ### Typography
 I used [Poppins](https://fonts.google.com/specimen/Poppins) because It's versatile and modern style.
-Additionally, I use [Font Awesome](https://fontawesome.com/) for icons in the game to make the site casual and friendly. 
+Additionally, I use [Font Awesome](https://fontawesome.com/) for icons in the game to make the site casual and friendly and for my social media icons in the footer to help users quickly and easily identify my social media sites.
 
 
 ## Features
@@ -74,7 +78,7 @@ Additionally, I use [Font Awesome](https://fontawesome.com/) for icons in the ga
 
 The header contains the banner of the website, Guess word. It is simple but concise. The banner will display on the top of the website at all time so users have an accessible shotcut to go back to the home page anytime.
 
-![Screenshot of the banner in the website](/documentation/readme/navigation-bar.png)
+![Screenshot of the banner in the website](/documentation/readme/banner.png)
 
 ### Home page
 
@@ -83,13 +87,14 @@ The home page include the banner, the instruction (How to play button) and a pla
 ![Screenshot of the home page in the website](/documentation/readme/home-page.png)
 
 - The instruction informs users of how to play the game with clear instructions.
-![Screenshot of the instruction in the website](/documentation/readme/home-page.png)
+
+![Screenshot of the instruction in the website](/documentation/readme/instruction.png)
 
 ### The Game Section
 
 Now, the game starts! The game section includes the banner, 2 images, timer, score, a hint and a number that show how many word left. Each round, the user will have 30 seconds to guess a word which makes the game excited. But not too hard so a hint will be a hero to help users. Score feature allows users to see how many score they've collected and page number allows users to know where they are in the game and how many word left to play. 
 
-![Screenshot of the game section in the home page](/documentation/readme/program-section.png)
+![Screenshot of the game section in the home page](/documentation/readme/game-page.png)
 
 ### Notified Pop-up
 
@@ -97,30 +102,31 @@ The notified Pop-up allows users to get a result of their guess. When users clic
 
 - A pop-up to informs users to type in an answer before moving on the next word.
 
-![Screenshot of the an empty input pop-up](/documentation/readme/home-page.png)
+![Screenshot of the an empty input pop-up](/documentation/readme/empty-input-popup.png)
 
 - A pop-up to informs users that the answer is correct.
 
-![Screenshot of the an empty input pop-up](/documentation/readme/home-page.png)
+![Screenshot of the an correct input pop-up](/documentation/readme/correct-popup.png)
 
 - A pop-up to informs users that the answer is incorrect.
 
-![Screenshot of the an empty input pop-up](/documentation/readme/home-page.png)
+![Screenshot of the an incorrect input pop-up](/documentation/readme/incorrect-popup.png)
 
 - A pop-up to informs users that the time is up.
 
-![Screenshot of the an empty input pop-up](/documentation/readme/home-page.png)
+![Screenshot of the an  timeUp pop-up](/documentation/readme/timeup-popup.png)
 
 ### Game Over
 
 The game over section includes the banner, Game over text, total score and a play again button. This section allows users to get the result of the game and see how many words they knew. Users can play as many time as they want by clicking the play again button.
 
-![Screenshot of the game over page ](/documentation/readme/testimonials.png)
+![Screenshot of the game over page ](/documentation/readme/game-over-page.png)
 
 ### 404 page
 
 The 404 page will displayed if the user navigate to a broken link.
-![Screenshot of the 404 page in the website](/documentation/readme/footer.png)
+
+![Screenshot of the 404 page in the website](/documentation/readme/404-page.png)
 
 
 ## Future Features
@@ -175,15 +181,22 @@ To clone the repository:
 ## Credits
 
 ### Content
-- The font styles in the Guess Word Game website were taken from Google Fonts []()
+- The font styles in the Guess word game website were taken from Google Fonts [Poppins](https://fonts.google.com/specimen/Poppins)
 - The icons in the website were taken from [Font Awesome](https://fontawesome.com/)
-- Wireframes I have used is [Canva](https://canva.com/)
+- Wireframes I have created in [Canva-whiteboard](https://canva.com/)
 - The definitions of words were modified from [Microsoft Copilot](https://copilot.microsoft.com/)
 - The introduction, guessing words including the hint texts were modified by myself.
+- The Modal of Instruction was learned and modified from [Specific Youtube Tutorial](https://www.youtube.com/watch?v=XH5OW46yO8I)
+- The code to create a function that randomly selects an object in the array. Using Fisher Yates Shuffle and learned from [Specific Youtube Tutorial](https://www.youtube.com/watch?v=FGAUekwri1Q) and modified to suit the website needs.
+- The code for the timer was learned and modified to suit my project from tutorials from [W3Schools](https://w3Schools.com/) and [Specific Youtube Tutorial](https://dev.to/gloriasilver/how-to-schedule-tasks-using-javascript-timers-and-intervals-4385?form=MG0AV3)
+- Modified and combined components methods from documentations and tutorials on CI learning platform, [W3Schools](https://w3Schools.com/), [MDN Web Docs](https://developer.mozilla.org/en-US/) and [StackOverFlow](https://stackoverflow.co/)  
 ### Media
 - All images were taken from [Pexels](https://pexels.com/)
-### Code
-
 
 ### Acknowledgments
 I would like to thank you the following people:
+
+- Jubril Akolade - My code Institute mentor who gave me persistent guidance, encouragement, and invaluable feedback throughout my project to become a better developer. Thank you.
+- Code Instutute Team and the slack community that shared ideas, solutions and inspirations during the journey. Thank you.
+- My partner, Eric who is always supportive and believe in me. Cheer me up when I felt overwelming and struggle. Thank you.
+- My sister, May who is a non-tech person but always--always there to listen to my struggle and my frustration with debugging and bla bla. It means a lot to me that I could talk to her and knew that she would understand and support me in everyway. Thank you.
