@@ -317,14 +317,16 @@ footer {
 }
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: rcenter;
     padding-bottom: 20px;
 }
 
-.footer i {
+.footer a {
+    font-size: 1.7em;
     color: var(--text-color);
+    padding-right: 10px;
+}
+.footer a:hover {
+    color: var(--text-hover-color);
 }
 
 
