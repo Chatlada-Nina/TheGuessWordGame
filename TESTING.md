@@ -19,7 +19,7 @@
   - [index.html](/documentation/readme/index-validator-results-before.png) - There are 3 issues that need to be fixed. The first 2 issues are from trailing slash on void element had no effect and intereacted badly with un quoted attribute values. To solve these issues, I removed the unneccesary slash from the elements. The last issue is the document is not mapable to XML 1.0 due to two consecutive hyphens in a comment. To solve this issue, I removed the two consecutive hyphens from the comment.  
 
   - [index.html](/documentation/readme/index-validator-results-after.png) - After fixing issues, the result of the validation is Passed.
-  
+
   - [404.html](/documentation/readme/programs-validator-results.png) - Passed.
   
 
@@ -30,28 +30,17 @@
 
 ### Lighthouse
 
-I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility and best practices of the website. 
-- To improve the Lighthouse performance score, I evaluated the image sizes issues and converted the images file(jpeg,png) to .webp
-- To improve the Lighthouse accessibility score, I changed the body's background color to be a bit lighther on every pages to make the clearer contrast and more readable for users.
-- To improve the Lighthouse accessibility score, I changed the color of customer's name on the testimonials section to be darker to make the clearer contrast and more readable for users.
-- To improve the Lighthouse Best Practices score, I deleted issued link (site.webmanifest) from Favicon which caused the browser errors on my site, now the site is healthy and followed modern standards of web development.
- 
-  
-1. Home page
+I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website. 
 
-![index.html](/documentation/readme/homepage-lighthouse.png)
+- To improve the Lighthouse accessibility score, I add aria-label attribute to my social media icon links in the footer, to fullfill th requirement of the screen readers.
 
-2. Programs page
 
-![programs.html](/documentation/readme/programs-lighthouse.png)
+![index.html](/documentation/readme/lighthouse-accessibility-score.png)
 
-3. Booking page
+- After the improvement, The total score looks great!
 
-![booking.html](/documentation/readme/booking-lighthouse.png)
+![index.html](/documentation/readme/lighthouse-performance-final.png)
 
-4. Success page
-
-![success.html](/documentation/readme/success-lighthouse.png)
 
 ## MANUAL TESTING
 
