@@ -200,3 +200,4 @@ I would like to thank you the following people:
 - Code Instutute Team and the slack community that shared ideas, solutions and inspirations during the journey. Thank you.
 - My partner, Eric who is always supportive and believe in me. Cheer me up when I felt overwelming and struggle. Thank you.
 - My sister, May who is a non-tech person but always--always there to listen to my struggle and my frustration with debugging and bla bla. It means a lot to me that I could talk to her and knew that she would understand and support me in everyway. Thank you.
+- Myself, thank you for not giving up. You are doing great! keep it up!
