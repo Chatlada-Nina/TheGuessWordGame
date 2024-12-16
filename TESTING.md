@@ -10,6 +10,7 @@
   * [JavaScript Validator](#javascript-validator)
   * [Lighthouse](#lighthouse)
 * [MANUAL TESTING](#manual-testing)
+  * [Testing User Stories](#testing-user-stories)
   * [Full Testing](#full-testing)
 
 ## AUTOMATED TESTING
@@ -17,21 +18,29 @@
 ### HTML 
 I used [W3C Markup Validation Service](https://validator.w3.org/) to check and validate the HTML code.
 
-  - [index.html](/documentation/readme/index-validator-results-before.png) - There are 3 issues that need to be fixed. The first 2 issues are from trailing slash on void element had no effect and intereacted badly with un quoted attribute values. To solve these issues, I removed the unneccesary slash from the elements. The last issue is the document is not mapable to XML 1.0 due to two consecutive hyphens in a comment. To solve this issue, I removed the two consecutive hyphens from the comment.  
+`index.html`
+- There are 3 issues that need to be fixed. The first 2 issues are from trailing slash on void element had no effect and intereacted badly with un quoted attribute values. To solve these issues, I removed the unneccesary slash from the elements. The last issue is the document is not mapable to XML 1.0 due to two consecutive hyphens in a comment. To solve this issue, I removed the two consecutive hyphens from the comment. 
+![index.html](/documentation/testing/html/index-validator-results-before.png) 
 
-  - [index.html](/documentation/readme/index-validator-results-after.png) - After fixing issues, the result of the validation is Passed.
 
-  - [404.html](/documentation/readme/programs-validator-results.png) - Passed.
+- After fixing issues, the result of the validation is Passed.
+![index.html](/documentation/testing/html/index-validator-results-after.png)
+
+
+`404.html`
+- Passed.
+![404.html](/documentation/testing/html/404-validator-result.png)
   
 
 ### CSS 
 I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check and validate the CSS code.
 
-  - [style.css](/documentation/readme/CSS-validator-results.png) - Passed, no errors found.
+- Passed, no errors found.
+![style.css](/documentation/testing/CSS-validator-results.png)
 
 ### JavaScript Validator
 
-I used [JShint](https://jshint.com/) to validate the JavaScript code.
+I used [JSHint](https://jshint.com/) to validate the JavaScript code.
 
 `script.js`
 - 56 warning about 'const' is available in ES6 and 'arrow function syntax' is only available in ES6. It also stated that 'wordList is undefined variable (This dued to the variable being in a separate js file named wordlist.js)
@@ -58,11 +67,11 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 - To improve the Lighthouse accessibility score, I add aria-label attribute to my social media icon links in the footer, to fullfill th requirement of the screen readers.
 
 
-![index.html](/documentation/readme/lighthouse-accessibility-score.png)
+![index.html](/documentation/testing/lighthouse/lighthouse-accessibility-score.png)
 
 - After the improvement, The total score looks great!
 
-![index.html](/documentation/readme/lighthouse-performance-final.png)
+![index.html](/documentation/testing/lighthouse/lighthouse-performance-final.png)
 
 
 ## MANUAL TESTING
