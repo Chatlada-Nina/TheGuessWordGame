@@ -63,14 +63,13 @@ Each device tested the site using the following browsers:
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| The Site's logo | Link directly users back to the home page | Clicked logo | Home page reloads | Pass |
-| Home | Link to the home page and show in darker color when it's active| Clicked on the text | Home page reloads | Pass |
-| Spa Programs | Link directly users to the Programs page | Clicked on the text | Programs page opens | Pass |
-| Contact | Direct users to the contact section on the footer | Clicked on the text | Direct users to the contact section on the footer | Pass |
-| BOOK NOW Button | Direct users to the booking page | Clicked on button | Direct users to the booking page | Pass |
-| All buttons - hover effect | All brown buttons with white text should change to light brown with dark-gray text when hovered over. | Hovered over each button on the page | Each button displayed correctly styling when hovered over | Pass |
+| The Site's banner | Link directly users back to the home page | Clicked banner | Home page reloads | Pass |
+| How to play | Link to the instruction of the game| Clicked on the text | The instruction displays | Pass |
+| Close button in on the instruction | close the instruction of the game| Clicked on the text | The instruction closes | Pass |
+| PLAY Button | Direct users to start the game | Clicked on the text | Game section opens | Pass |
+| All buttons - hover effect | All blue backfround-color buttons with white text should change to red background color when hovered over. | Hovered over each button on the page | Each button displayed correctly styling when hovered over | Pass |
 | Pointer Cursor | The pointer should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the pointer cursor | Pass |
-| Link "See all spa programs" | Link directly users to the Programs page | Clicked on the text | Programs page opens | Pass |
-| Link "See all spa programs" - hover effect | Text color should change to light brown color when hovered over. | Hovered over the text | The text displayed correctly styling when hovered over | Pass |
-| Social media icons | Link directly users to each social media sites | Clicked on each icon | Social media site open in a new tab | Pass |
+| Game section | Displays images, an input field, OK button, Timer, A hint, Score and Turn-page counting | Clicked on the Play button | Game section displays all elements | Pass |
+| Timer | Starts count down 30s-restart every round-when time is up, the pop-up displays with a notification | Clicked on the Play button, the OK button and waited until the timer over | Timer starts count down in every round and the notification displays when time is up | Pass |
+| Input filed | Requires some text before moving on to the next round | Click OK with empty field | The pop-up displays a notification | Pass |
 | Social media icons - hover effect | Icon's color should change to light brown color when hovered over. | Hovered over each icon | The icons displayed correctly styling when hovered over | Pass |
