@@ -8,6 +8,12 @@ In a study by [Carpenter and Olson(2012)](https://www.researchgate.net/publicati
 
 The game is suitable for children, English learners and anyone, let's increase your vocabulary list today!
 
+![GitHub last commit](https://img.shields.io/github/last-commit/chatlada-nina/TheGuessWordGame?color=darkcyan&style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/chatlada-nina/TheGuessWordGame?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/chatlada-nina/TheGuessWordGame?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/chatlada-nina/TheGuessWordGame?color=yellow&style=for-the-badge)
+![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fchatlada-nina.github.io%2FTheGuessWordGame%2F&style=for-the-badge)
+
 ## CONTENTS
 
 * [UX - User Experience](#ux)

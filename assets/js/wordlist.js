@@ -1,4 +1,4 @@
-// Define an array of objects wordList wih word, definition, hint and image
+// Define an array of objects wordList with word, definition, hint and image
 
 const wordList = [
     {
