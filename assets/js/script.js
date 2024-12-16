@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 // ------------ HOME PAGE -------------
 // Define the modal instruction elements and add eventListener(click) to add and remove class "reveal"
 const insOpen = document.getElementById("ins-open");

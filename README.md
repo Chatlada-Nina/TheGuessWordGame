@@ -55,8 +55,9 @@ This single page game site also allows me to design an interested game site and 
 1. As a parent of my children, I want to see a site that has easy and simple instructions for my children to understand and want to play the game.
 2. As a user, I want to see my score so that I know how many scores I received.
 3. As a user, I want to see how many words left so that I know where I am in the game.
-4. As a user, I want to have some clues to help me guess the word so that I do not feel the game is too difficult.
-5. As an English learner, I want to learn new words so that I can expand my vocabulary skill.
+4. As a English learner, I want to have some clues to help me guess the word so that I do not feel the game is too difficult.
+5. As an English learner, I want to learn new words and be able to access a site in my devices so that I can expand my vocabulary skill anytime i want.
+
 
 ### Wireframes
 [Home](/documentation/wireframe/homepage.png)

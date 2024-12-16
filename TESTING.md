@@ -7,6 +7,7 @@
 * [AUTOMATED TESTING](#automated-testing)
   * [HTML](#html)
   * [CSS](#css)
+  * [JavaScript Validator](#javascript-validator)
   * [Lighthouse](#lighthouse)
 * [MANUAL TESTING](#manual-testing)
   * [Full Testing](#full-testing)
@@ -14,7 +15,7 @@
 ## AUTOMATED TESTING
 
 ### HTML 
-- I used [W3C Markup Validation Service](https://validator.w3.org/) to check and validate the HTML code.
+I used [W3C Markup Validation Service](https://validator.w3.org/) to check and validate the HTML code.
 
   - [index.html](/documentation/readme/index-validator-results-before.png) - There are 3 issues that need to be fixed. The first 2 issues are from trailing slash on void element had no effect and intereacted badly with un quoted attribute values. To solve these issues, I removed the unneccesary slash from the elements. The last issue is the document is not mapable to XML 1.0 due to two consecutive hyphens in a comment. To solve this issue, I removed the two consecutive hyphens from the comment.  
 
@@ -24,9 +25,31 @@
   
 
 ### CSS 
-- I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check and validate the CSS code.
+I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check and validate the CSS code.
 
   - [style.css](/documentation/readme/CSS-validator-results.png) - Passed, no errors found.
+
+### JavaScript Validator
+
+I used [JShint](https://jshint.com/) to validate the JavaScript code.
+
+`script.js`
+- 56 warning about 'const' is available in ES6 and 'arrow function syntax' is only available in ES6. It also stated that 'wordList is undefined variable (This dued to the variable being in a separate js file named wordlist.js)
+![script.js-before](documentation/testing/jshint/jshint-script-before.png) 
+
+- To improve this, I include a commented out line, /*jshint esversion: 6 */ at the top of the file. The resouce of solution found in [StackOverFlow](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const/37472928#37472928)
+
+![script.js-after](documentation/testing/jshint/jshint-script-after.png)
+
+`wordlist.js`
+
+- A warning about 'const' is available in ES6 same as the script.js above and one unused varible 'wordList' (This dued to the variable be used in a separate js file named script.js)
+
+![wordlist.js-before](documentation/testing/jshint/jshint-wordlist-before.png)
+
+- To improve this, I include a commented out line, /*jshint esversion: 6 */ at the top of the file. The resouce of solution found in [StackOverFlow](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const/37472928#37472928)
+
+![wordlist.js-after](documentation/testing/jshint/jshint-wordlist-after.png)
 
 ### Lighthouse
 
@@ -43,6 +66,19 @@ I used Lighthouse within the Chrome Developer Tools to test the performance, acc
 
 
 ## MANUAL TESTING
+
+### Testing User Stories
+
+
+| Goals | How are they achieved? |
+| :--- | :--- |
+| I want to see a site that has easy and simple instructions for my children to understand and want to play the game. | The Home page displays the clear instruction and a PLAY button. The banner acts as a link to the home page and visible at all time. I decided to make the game site simple, clean and concise with all essential elements on the site to make sure users in all age could easily play the game. |
+| I want to see my score to see how many scores I received. | The game section, the current score display to inform users how many current score they have collected and in the end of the game, users will see their total score. |
+| I want to see how many words left to know where I am in the game | The game section, display the turn page number (1 / 10) under the hint text to inform users how many page left and how many in total. |
+| I want to have some clues to help me guess the word. | The game section, display a hint text to give users a clue with will related with a word and images so users could feel more engaged with the game.
+| I want to learn new words to expand my vocabulary skill. I want to be able to play at any time, anywhere. | The Guess word game is simple and all words in the game are compound words which mean two or more words combine to form a new single word. The site is available for use whenever is convenient to the user. |
+| I want the site to be responsive to my devices. | I have developed the responsive site which user can simply open in different screen size of devices. |
+
 
 ### Full Testing
 
