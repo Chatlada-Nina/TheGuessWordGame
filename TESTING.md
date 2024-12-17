@@ -36,7 +36,7 @@ I used [W3C Markup Validation Service](https://validator.w3.org/) to check and v
 I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to check and validate the CSS code.
 
 - Passed, no errors found.
-![style.css](/documentation/testing/CSS-validator-results.png)
+![style.css](/documentation/testing/css-validator-results.png)
 
 ### JavaScript Validator
 
