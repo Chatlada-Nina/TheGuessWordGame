@@ -2,7 +2,7 @@
 
 ![The website shown on a variety of screen sizes](/documentation/readme/screen-responsive.png)
 
-**The Guess Word Game** is my second project for Code Instutute. The idea started with a popular TV program which I used to watch with my family in my hometown. They will show the audients an image to guess a secret word and the audients need to answer to collect the score, who is collected the highest score will win. This game is very fun and gave me the idea to create a similar game with the purpose of learning and making the game more accessable, users can learn and play the game on their phone and other devices any time and anywhere.
+**The Guess Word Game** is my second project for Code Institute. The idea started with a popular TV program which I used to watch with my family in my hometown. They will show the audients an image to guess a secret word and the audients need to answer to collect the score, who is collected the highest score will win. This game is very fun and gave me the idea to create a similar game with the purpose of learning and making the game more accessable, users can learn and play the game on their phone and other devices any time and anywhere.
 
 In a study by [Carpenter and Olson(2012)](https://www.researchgate.net/publication/51519245_Are_Pictures_Good_for_Learning_New_Vocabulary_in_a_Foreign_Language_Only_If_You_Think_They_Are_Not), vocabulary learning from picture-word pairing was more effective than words translated in native language. 
 
@@ -153,7 +153,7 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 ### Bugs discovered
 - When the instruction modal display on a mobile phone, the close button position is too low. To improve this, I adjust the padding in CSS to ensure that the button position is fit the phone screen and other screen.
 - When user fill in a correct answer with the uppercase, the function checked as a wrong answer. To improve this, I added .toLowerCase() in the checkAnswer function to convert whatever users types in, it will be compared in a case-insensitive manner. 
-- When user is typing the input on a mobile device, the entire page is shifted up, pushing the banner out of the view and the pop-up button not working properly. To fix this issue, I add interactive-widget property set to resizes-content to the meta tag, forces the browser to use the previous behavior, where both the Visual and Layout viewports are resized. - Resource from [Stackoverflow](https://stackoverflow.com/questions/77812591/when-opening-the-keyboard-on-mobile-how-can-i-force-my-content-to-shrink-to-fit)
+- When user is typing the input on a mobile device, the entire page is shifted up, pushing the banner out of the view and the pop-up button is not working properly. To fix this issue, I used methods to form a function in JS that listens for the window resize event, calculates the necessary scroll position to ensure both the banner and input field are visible, and smoothly scrolls the page to that position. Now, the pop-up button is working properly. - Resource from [MDN Web Docs](https://developer.mozilla.org/en-US/)
 
 
 

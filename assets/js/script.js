@@ -268,7 +268,7 @@ function endGame() {
 
 
 
-//when the keyboard appears and scroll the page to the input field. 
+//when the keyboard appears and scroll the page to the input field. Resources from MDN Web Docs (https://developer.mozilla.org/en-US/)
 // This function ensures that the input field and banner remains in view when the keyboard is active.
 window.addEventListener('resize', function() { 
     const inputField = document.getElementById('answerInput'); 
