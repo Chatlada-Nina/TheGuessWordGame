@@ -33,9 +33,9 @@ body {
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 
@@ -45,7 +45,6 @@ body {
 .main-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: 5% 5%;
     border-radius: 20px;
@@ -56,11 +55,12 @@ body {
 .main-container img {
     border-radius: 30px;
     width: 100%;
+    padding-top: 10px;
 }
 
 #start {
     padding: 5px 20px;
-    margin-top: 0.5em;
+    margin: 10px 0 20px 0;
     font-size: 1em;
     color: var(--button-text-color);
     background: var(--button-bg-color);
@@ -69,6 +69,7 @@ body {
     border-radius: 30px;
     cursor: pointer;
 }
+
 #start:hover {
     background: var(--button-hover-color);
     transition: transform 0.2s, background-color 0.2s;
@@ -77,6 +78,10 @@ body {
 
 
 /* ------------Modal of Instruction--------- */
+
+#instruction {
+    margin: 50px 0 10px 0;
+}
 
 #modal-instruction {
     position: fixed;
@@ -116,6 +121,7 @@ body {
     padding: 20px 30px;
     font-size: 1em;
     margin-left: 10px;
+    line-height: 1.8;
 }
 
 #ins-open {
@@ -197,6 +203,7 @@ body {
 #hint {
     align-self: center;
     font-style: italic;
+    font-size: 1em;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
@@ -205,7 +212,7 @@ body {
 }
 
 #turnpage {
-    margin-top: 15px;
+    margin: 15px 0 5px 0;
     font-weight: 500;
     color: var(--text-color);
 }
@@ -215,11 +222,11 @@ body {
 /* -----------End Game section----------- */
 
 #endgame-container {
-    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--text-color);
+    padding-top: 20px;
 }
 
 #totalScore {
@@ -227,9 +234,13 @@ body {
     font-weight: 500;
 }
 
+#restartText {
+    padding-top: 40px;
+}
+
 #restartBtn {
     padding: 5px 20px;
-    margin-top: 20px;
+    margin: 20px 0 30px 0;
     font-size: 1em;
     font-weight: 600;
     text-transform: uppercase;
@@ -317,15 +328,12 @@ footer {
     margin-top: auto;
 }
 
-.footer {
-    padding-bottom: 20px;
-}
-
 .footer a {
     font-size: 1.7em;
     color: var(--text-color);
     padding-right: 10px;
 }
+
 .footer a:hover {
     color: var(--text-hover-color);
 }
@@ -346,18 +354,22 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
 .content-404 h1 {
     font-weight: 200;
     font-size: 5em;
 }
+
 .content-404 h2 {
     font-size: 1.5em;
 }
+
 .content-404 p {
     font-size: 1em;
     padding-bottom: 10%;
     font-style: italic;
 }
+
 .btn-404 {
     border-radius: 30px;
     font-size: 1em;
@@ -365,6 +377,7 @@ footer {
     background-color: var(--button-bg-color);
     padding: 5px 40px;
 }
+
 .btn-404:hover {
     background-color: var(--text-hover-color);
 }
@@ -377,13 +390,17 @@ footer {
     #ins-open {
         font-size: 1.3em;
     }
+
     #start {
         font-size: 1.2em;
         padding: 8px 30px;
     }
+
     .main-container {
-        max-width: 60%;
+        max-width: 70%;
+        margin-top: 20px;
     }
+
 }
 
 /* Laptops */
@@ -392,6 +409,7 @@ footer {
     #ins-open {
         font-size: 1.3em;
     }
+
     #start {
         font-size: 1.2em;
     }
@@ -405,15 +423,28 @@ footer {
     .alert-box {
         max-width: 500px;
     }
+
     .main-container {
-        max-width: 50%;
+        max-width: 60%;
+        margin-top: 20px;
+    }
+
+    #game-container {
+        max-width: 90%;
+        line-height: 1;
+        margin: 0;
     }
 }
 
 /* Large screen devices */
 @media only screen and (min-width : 992px) {
     .main-container {
-        max-width: 460px;
+        max-width: 50%;
         margin-top: 10px;
+        padding: 0;
+    }
+
+    .main-container #banner {
+        max-width: 380px;
     }
 }
