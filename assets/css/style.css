@@ -29,13 +29,17 @@
     font-family: "Poppins", sans-serif;
 }
 
+html, body { 
+    height: 100%; 
+    margin: 0; 
+}
+
 body {
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
+    justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 
@@ -226,7 +230,6 @@ body {
     flex-direction: column;
     align-items: center;
     color: var(--text-color);
-    padding-top: 20px;
 }
 
 #totalScore {
@@ -396,11 +399,6 @@ footer {
         padding: 8px 30px;
     }
 
-    .main-container {
-        max-width: 70%;
-        margin-top: 20px;
-    }
-
 }
 
 /* Laptops */
@@ -425,26 +423,20 @@ footer {
     }
 
     .main-container {
-        max-width: 60%;
-        margin-top: 20px;
-    }
-
-    #game-container {
-        max-width: 90%;
-        line-height: 1;
-        margin: 0;
+        margin-top: 10%;
+        width: 80%;
     }
 }
 
 /* Large screen devices */
 @media only screen and (min-width : 992px) {
     .main-container {
-        max-width: 50%;
-        margin-top: 10px;
-        padding: 0;
+        width: 50%;
     }
-
     .main-container #banner {
-        max-width: 380px;
+        width: 60%;
+    }
+    #game-container {
+        width: 70%;
     }
 }
